@@ -6,7 +6,7 @@ import CheckoutButton from "./CheckoutButton";
 
 const StyledTodayItem = styled.li`
   display: grid;
-  grid-template-columns: 9rem 2rem 1fr 7rem 9rem;
+  grid-template-columns: 9rem 2rem 1fr 7rem 12rem 9rem;
   gap: 1.2rem;
   align-items: center;
 
@@ -24,7 +24,7 @@ const Guest = styled.div`
 `;
 
 function TodayItem({ activity }: any) {
-  const { id, status, guests, numNights } = activity;
+  const { id, status, guests, numNights, startDate, endDate } = activity;
 
   return (
     <StyledTodayItem>
@@ -34,6 +34,9 @@ function TodayItem({ activity }: any) {
       <Flag src={guests.countryFlag} alt={`Flag of ${guests.country}`} />
       <Guest>{guests.fullName}</Guest>
       <div>{numNights} nights</div>
+      <div>
+        {(status === "unconfirmed" ? startDate : endDate)?.split("T")[0]}
+      </div>
 
       {status === "unconfirmed" && (
         <Button size="small" variant="primary" as={Link} to={`/checkin/${id}`}>

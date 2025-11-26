@@ -51,7 +51,7 @@ function SalesChart({ bookings, numDays }: any) {
           stroke: "var(--color-brand-600)",
           fill: "var(--color-brand-600)",
         },
-        extrasSales: { stroke: "#22c55e", fill: "#22c55e" },
+        extrasSales: { stroke: "#0369a1", fill: "#0369a1" },
         text: "#e5e7eb",
         background: "#18212f",
       }
@@ -60,7 +60,7 @@ function SalesChart({ bookings, numDays }: any) {
           stroke: "var(--color-brand-600)",
           fill: "var(--color-brand-600)",
         },
-        extrasSales: { stroke: "#16a34a", fill: "#dcfce7" },
+        extrasSales: { stroke: "#0369a1", fill: "#0369a1" },
         text: "#374151",
         background: "#fff",
       };
