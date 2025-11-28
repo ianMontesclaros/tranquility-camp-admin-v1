@@ -3,8 +3,6 @@ import { useSignup } from "@/hooks/authentication";
 import { Button } from "@/components/ui";
 import { Form, FormRow, Input } from "@/components/form";
 
-// email regex: /\S+@\S+\.\S+/
-
 function SignupForm() {
   const { signup, isLoading } = useSignup();
   const { register, formState, getValues, handleSubmit, reset } = useForm();
